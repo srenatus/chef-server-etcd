@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# rabbitmqctl needs this
+export HOME=/
+
+exec 2>&1
+exec /opt/chef-server/embedded/bin/etcd-chef -c /tmp/cookbooks/chef-server-etcd/config.rb -o etcd-support,chef-server-etcd
