@@ -27,6 +27,7 @@ Adjust the way the chef-server Omnibus package finds its way into the container 
     chmod +x jq
     curl -L http://127.0.0.1:4001/v1/keys/chef-server/admin.pem  | ./jq -r .value > admin.pem
     curl -L http://127.0.0.1:4001/v1/keys/chef-server/chef-validator.pem  | ./jq -r .value > chef-validator.pem
+    curl -L http://127.0.0.1:4001/v1/keys/chef-server/knife.rb  | ./jq -r .value > knife.rb
     ```
 
 5. setup your Chef toolchain to use your new Chef server...
