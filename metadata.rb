@@ -1,5 +1,5 @@
 name             'chef-server-etcd'
-maintainer       'YOUR_COMPANY_NAME'
+maintainer       'cloudbau GmbH'
 maintainer_email 's.renatus@cloudbau.de'
 license          'Apache 2.0'
 description      'Wrapper for using `chef-server` cookbook with etcd-chef'
