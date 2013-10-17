@@ -19,7 +19,7 @@ Adjust the way the chef-server Omnibus package finds its way into the container 
 
 1. get the container (i.e. build it or pull it from your repository)
 2. post your `api_fqdn` value to `etcd` (see below)
-3. `docker run -v /tmp/logs:/var/log/chef-server sr/chefserveretcd` - note that the first run executes the first `chef-server-ctl reconfigure` of the Omnibus package and thus takes a while.  You can monitor its logs in `/tmp/logs/etcd-chef/current`.
+3. `docker run -v /tmp/logs:/var/log/chef-server -p 443:443 sr/chefserveretcd` - note that the first run executes the first `chef-server-ctl reconfigure` of the Omnibus package and thus takes a while.  You can monitor its logs in `/tmp/logs/etcd-chef/current`.
 4. fetch your new Chef server's `admin.pem` and `chef-validator.pem` from `etcd`, e.g.
 
     ```
